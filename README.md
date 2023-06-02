@@ -41,7 +41,9 @@ We're currently undertaking code refactoring for prompt debiasing (employing BER
 
 ## Acknowledgements
 
-# Cite as
+We greatly appreciate the contributions of the great public projects, [SJC](https://github.com/pals-ttic/sjc) and [ThreeStudio](https://github.com/threestudio-project/threestudio).
+
+## Cite as
 ```
 @article{hong2023debiasing,
   title={Debiasing scores and prompts of 2d diffusion for robust text-to-3d generation},
