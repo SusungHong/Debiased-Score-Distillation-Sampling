@@ -3,7 +3,7 @@
 
 Welcome to the official and practical implementation of the Debiasing Score Distillation Sampling (D-SDS) as outlined in our research [paper](https://arxiv.org/abs/2303.15413).
 
-## 👥 Why Choose D-SDS?
+## 🎭 Why Choose D-SDS?
 
 D-SDS offers a solution when SDS methods, such as DreamFusion, don't produce the 3D results you're aiming for. If you've faced issues with artifacts or multiple faces, D-SDS is designed to overcome these challenges through two key mechanisms: Score Debiasing and Prompt Debiasing. For a comprehensive understanding of these processes, we recommend delving into our [paper](https://arxiv.org/abs/2303.15413).
 
