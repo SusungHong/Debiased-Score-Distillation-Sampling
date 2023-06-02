@@ -3,7 +3,7 @@
 
 Welcome to the official and practical implementation of the Debiasing Score Distillation Sampling (D-SDS) as outlined in our research [paper](https://arxiv.org/abs/2303.15413).
 
-## Why Choose D-SDS?
+## 👥 Why Choose D-SDS?
 
 D-SDS offers a solution when SDS methods, such as DreamFusion, don't produce the 3D results you're aiming for. If you've faced issues with artifacts or multiple faces, D-SDS is designed to overcome these challenges through two key mechanisms: Score Debiasing and Prompt Debiasing. For a comprehensive understanding of these processes, we recommend delving into our [paper](https://arxiv.org/abs/2303.15413).
 
@@ -21,7 +21,7 @@ Below are the results with D-SDS on SJC:
 | a small kitten |   |  |
 | a majestic giraffe with a long neck |  |  |
 
-## Using D-SDS
+## 🐧 Using D-SDS
 
 Incorporating D-SDS into your work is a straightforward process, particularly with our score-debiasing feature that facilitates static and dynamic clipping of 2D-to-3D scores.
 
@@ -33,9 +33,9 @@ python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.pro
 
 For [SJC](https://github.com/pals-ttic/sjc), simply clone the original repository and adjust the setting `/path/to/sjc/run_sjc.py` to ours.
 
-We're currently undertaking code refactoring for prompt debiasing (employing BERT to identify contradictions) and will be releasing this updated codebase soon!
+We're currently undertaking code refactoring for prompt debiasing (employing BERT-like LMs to identify contradictions) and will be releasing this updated codebase soon!
 
-## Ongoing Work
+## 🔥 Work in process
 - [x] Refactoring Score Debiasing
 - [ ] Refactoring Prompt Debiasing
 
