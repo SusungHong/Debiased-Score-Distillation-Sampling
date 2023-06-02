@@ -18,8 +18,8 @@ Below are the results with D-SDS on SJC:
 
 |           | SDS (DreamFusion) | Debiased-SDS (Ours, Score + Prompt) |
 |:---------:|:-----------------:|:-------------------:|
-| a majestic giraffe with a long neck | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a2b7404e-0caa-4086-96e4-e7c625d7f2e2" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/9d0cdd3a-5003-4520-8b4d-e69e09f445fb" width="400"/> |
-| a small kitten | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a128db5d-06a3-45be-91b8-c6e5e2c5ecab" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/4b4a8118-92b0-4021-a28b-60c56724c664" width="400"/> |
+| a majestic giraffe with a long neck | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a2b7404e-0caa-4086-96e4-e7c625d7f2e2" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/9d0cdd3a-5003-4520-8b4d-e69e09f445fb" width="150"/> |
+| a small kitten | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a128db5d-06a3-45be-91b8-c6e5e2c5ecab" width="150"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/4b4a8118-92b0-4021-a28b-60c56724c664" width="400"/> |
 
 ## 🐧 Using D-SDS
 
