@@ -7,7 +7,7 @@ Welcome to the official and practical implementation of the Debiasing Score Dist
 
 D-SDS offers a solution when SDS methods, such as DreamFusion, don't produce the 3D results you're aiming for. If you've faced issues with artifacts or multiple faces, D-SDS is designed to overcome these challenges through two key mechanisms: Score Debiasing and Prompt Debiasing. For a comprehensive understanding of these processes, we recommend delving into our [paper](https://arxiv.org/abs/2303.15413).
 
-Below are the results with D-SDS on ThreeStudio:
+Below are the results with D-SDS on ThreeStudio implementation of DreamFusion:
 
 |            | SDS (DreamFusion) | D-SDS (Ours) |
 |:----------:|:------------:|:-----------:|
@@ -16,7 +16,7 @@ Below are the results with D-SDS on ThreeStudio:
 
 Below are the results with D-SDS on SJC:
 
-|            | SDS (DreamFusion) | D-SDS (Ours) |
+|            | SDS (SJC) | D-SDS (Ours) |
 |:----------:|:------------:|:-----------:|
 | a small kitten |   |  |
 | a majestic giraffe with a long neck |  |  |
