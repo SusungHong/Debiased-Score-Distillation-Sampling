@@ -17,8 +17,8 @@ Below are the results with D-SDS on ThreeStudio implementation of DreamFusion:
 
 Below are the results with D-SDS on SJC:
 
-|            | SDS (DreamFusion) | Debiased-SDS (Ours) |
-|:----------:|:-----------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------:|
+|           | SDS (DreamFusion) | Debiased-SDS (Ours) |
+|:---------:|:-----------------:|:-------------------:|
 | a small kitten |   |  |
 | a majestic giraffe with a long neck |  |  |
 
