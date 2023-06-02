@@ -18,7 +18,7 @@ Below are the results with D-SDS on SJC:
 
 | SDS (DreamFusion) | Debiased-SDS (Ours) |
 |:-----------------:|:-------------------:|
-| <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a2b7404e-0caa-4086-96e4-e7c625d7f2e2" width="150"/><img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/2b29150b-e787-4fa6-a485-30b2327c0ae5" width="150"/><img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a128db5d-06a3-45be-91b8-c6e5e2c5ecab" width="150"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/9d0cdd3a-5003-4520-8b4d-e69e09f445fb" width="150"/><img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/8ed61b9a-c7fa-47b5-8552-9658a612ea12" width="150"/><img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/4b4a8118-92b0-4021-a28b-60c56724c664" width="150"/> |
+| <img src="" width="150"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/3b1ed9b6-eac4-46cf-9934-bccbf23fb746" width="150"/><img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/8ed61b9a-c7fa-47b5-8552-9658a612ea12" width="150"/><img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/caf96dce-44d9-42f1-9815-fe9e91ffd2f8" width="150"/> |
 
 ## 🐧 Using D-SDS
 
