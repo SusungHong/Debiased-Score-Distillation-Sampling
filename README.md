@@ -14,11 +14,12 @@ Below are the results with D-SDS on ThreeStudio implementation of DreamFusion:
 | a colorful toucan with a large beak | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a4090873-8401-4601-b5a9-2f931637a669" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/e3f9b673-10f6-4844-a22e-f07e049393e1" width="400"/> |
 | kangaroo wearing boxing glove | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/067b6980-8e0c-45b0-8951-9816c327b012" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/138c03ad-b648-4b36-aa12-f8a29ffdfe7a" width="400"/> |
 
-Below are the results with D-SDS on SJC:
+Below are the results with D-SDS on SJC:![a cute and chubby _panda munching on bamboo]()
+
 
 |           | SDS (DreamFusion) | Debiased-SDS (Ours) |
 |:---------:|:-----------------:|:-------------------:|
-| a majestic giraffe with a long neck | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a2b7404e-0caa-4086-96e4-e7c625d7f2e2" width="150"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/9d0cdd3a-5003-4520-8b4d-e69e09f445fb" width="150"/> |
+| a majestic giraffe with a long neck | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a2b7404e-0caa-4086-96e4-e7c625d7f2e2" width="150"/><img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/2b29150b-e787-4fa6-a485-30b2327c0ae5" width="150"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/9d0cdd3a-5003-4520-8b4d-e69e09f445fb" width="150"/> |
 | a small kitten | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a128db5d-06a3-45be-91b8-c6e5e2c5ecab" width="150"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/4b4a8118-92b0-4021-a28b-60c56724c664" width="150"/> |
 
 ## 🐧 Using D-SDS
