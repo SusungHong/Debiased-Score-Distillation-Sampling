@@ -9,15 +9,10 @@ D-SDS offers a solution when SDS methods, such as DreamFusion, don't produce the
 
 Below are the results with D-SDS on ThreeStudio implementation of DreamFusion:
 
-<!-- |            | SDS (DreamFusion) | Debiased-SDS (Ours) |
-|:----------:|:-----------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------:|
-| a colorful toucan with a large beak |  ![toucan-none](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a4090873-8401-4601-b5a9-2f931637a669) | ![toucan-ours](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/e3f9b673-10f6-4844-a22e-f07e049393e1) |
-| kangaroo wearing boxing glove | ![kangaroo-none](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/067b6980-8e0c-45b0-8951-9816c327b012) | ![kangaroo-ours](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/138c03ad-b648-4b36-aa12-f8a29ffdfe7a) |
- -->
 |           | SDS (DreamFusion) | Debiased-SDS (Ours) |
 |:---------:|:-----------------:|:-------------------:|
-| a colorful toucan with a large beak | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a4090873-8401-4601-b5a9-2f931637a669" width="200"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/e3f9b673-10f6-4844-a22e-f07e049393e1" width="200"/> |
-| kangaroo wearing boxing glove | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/067b6980-8e0c-45b0-8951-9816c327b012" width="200"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/138c03ad-b648-4b36-aa12-f8a29ffdfe7a" width="200"/> |
+| a colorful toucan with a large beak | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a4090873-8401-4601-b5a9-2f931637a669" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/e3f9b673-10f6-4844-a22e-f07e049393e1" width="400"/> |
+| kangaroo wearing boxing glove | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/067b6980-8e0c-45b0-8951-9816c327b012" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/138c03ad-b648-4b36-aa12-f8a29ffdfe7a" width="400"/> |
 
 
 Below are the results with D-SDS on SJC:
