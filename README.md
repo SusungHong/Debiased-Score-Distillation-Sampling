@@ -1,7 +1,7 @@
 # Debiasing Scores and Prompts of 2D Diffusion for Robust Text-to-3D Generation (D-SDS)
 <a href="https://arxiv.org/abs/2303.15413"><img src="https://img.shields.io/badge/arXiv-2305.15413-B31B1B"></a>
 
-Welcome to the official and practical implementation of the Debiasing Score Distillation Sampling (D-SDS) as outlined in our research [paper](https://arxiv.org/abs/2303.15413).
+Welcome to the official and practical implementation of the [Debiasing Score Distillation Sampling (D-SDS)](https://arxiv.org/abs/2303.15413).
 
 ## 🎭 Why Choose D-SDS?
 
