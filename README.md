@@ -9,13 +9,17 @@ D-SDS offers a solution when SDS methods, such as DreamFusion, don't produce the
 
 Below are the results with D-SDS on ThreeStudio:
 
-|            | SDS (DreamFusion, SJC, ...) | D-SDS (Ours) |
+|            | SDS (DreamFusion) | D-SDS (Ours) |
 |:----------:|:------------:|:-----------:|
-|   Toucan   |  ![toucan-none](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a4090873-8401-4601-b5a9-2f931637a669) | ![toucan-ours](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/e3f9b673-10f6-4844-a22e-f07e049393e1) |
-| Kangaroo | ![kangaroo-none](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/067b6980-8e0c-45b0-8951-9816c327b012) | ![kangaroo-ours](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/138c03ad-b648-4b36-aa12-f8a29ffdfe7a) |
+| a colorful toucan with a large beak |  ![toucan-none](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/a4090873-8401-4601-b5a9-2f931637a669) | ![toucan-ours](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/e3f9b673-10f6-4844-a22e-f07e049393e1) |
+| kangaroo wearing boxing glove | ![kangaroo-none](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/067b6980-8e0c-45b0-8951-9816c327b012) | ![kangaroo-ours](https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/138c03ad-b648-4b36-aa12-f8a29ffdfe7a) |
 
 Below are the results with D-SDS on SJC:
 
+|            | SDS (DreamFusion) | D-SDS (Ours) |
+|:----------:|:------------:|:-----------:|
+| a small kitten |   |  |
+| a majestic giraffe with a long neck |  |  |
 
 ## Using D-SDS
 
