@@ -18,7 +18,7 @@ Below are the results with D-SDS on SJC:
 
 | SDS (DreamFusion) | Debiased-SDS (Ours) |
 |:-----------------:|:-------------------:|
-| <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/3b1ed9b6-eac4-46cf-9934-bccbf23fb746" width="150"/><img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/8ed61b9a-c7fa-47b5-8552-9658a612ea12" width="150"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/caf96dce-44d9-42f1-9815-fe9e91ffd2f8" width="150"/> |
+| <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/3b1ed9b6-eac4-46cf-9934-bccbf23fb746" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/caf96dce-44d9-42f1-9815-fe9e91ffd2f8" width="400"/> |
 
 ## 🐧 Using D-SDS
 
