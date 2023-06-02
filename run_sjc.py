@@ -6,24 +6,24 @@ from einops import rearrange
 from imageio import imwrite
 from pydantic import validator
 
-from my.utils import (
+from sjc.my.utils import (
     tqdm, EventStorage, HeartBeat, EarlyLoopBreak,
     get_event_storage, get_heartbeat, read_stats
 )
-from my.config import BaseConf, dispatch, optional_load_config
-from my.utils.seed import seed_everything
+from sjc.my.config import BaseConf, dispatch, optional_load_config
+from sjc.my.utils.seed import seed_everything
 
-from adapt import ScoreAdapter, karras_t_schedule
-from run_img_sampling import GDDPM, SD, StableDiffusion
-from misc import torch_samps_to_imgs
-from pose import PoseConfig
+from sjc.adapt import ScoreAdapter, karras_t_schedule
+from sjc.run_img_sampling import GDDPM, SD, StableDiffusion
+from sjc.misc import torch_samps_to_imgs
+from sjc.pose import PoseConfig
 
-from run_nerf import VoxConfig
-from voxnerf.utils import every
-from voxnerf.render import (
+from sjc.run_nerf import VoxConfig
+from sjc.voxnerf.utils import every
+from sjc.voxnerf.render import (
     as_torch_tsrs, rays_from_img, ray_box_intersect, render_ray_bundle
 )
-from voxnerf.vis import stitch_vis, bad_vis as nerf_vis
+from sjc.voxnerf.vis import stitch_vis, bad_vis as nerf_vis
 
 
 device_glb = torch.device("cuda")
