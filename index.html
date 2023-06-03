@@ -245,7 +245,8 @@
             First, we perform prompt debiasing to make the prompts consistent with the viewing direction of an object.
             Then, we perform score debiasing to remove the artifacts in the generated 3D objects.
             Note that our framework is easily applicable to any score-distilling text-to-3D generation framework, such as DreamFusion, SDS, Magic3D, <i>etc</i>.
-            For more details, please refer to <a href="https://arxiv.org/abs/2303.15413">our paper</a>.
+            We provide an implementation of our techniques applied to the DreamFusion and SJC, which can be found on our <a href="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling">official repository</a> for D-SDS.
+            For further details, please refer to <a href="https://arxiv.org/abs/2303.15413">our paper.</a>.
           </p>
         </div>
       </div>
@@ -309,13 +310,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{hong2023debiasing,
-      title={Debiasing Scores and Prompts of 2D Diffusion for Robust Text-to-3D Generation}, 
-      author={Susung Hong and Donghoon Ahn and Seungryong Kim},
-      year={2023},
-      eprint={2303.15413},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+    <pre><code>@article{hong2023debiasing,
+      title={Debiasing scores and prompts of 2d diffusion for robust text-to-3d generation},
+      author={Hong, Susung and Ahn, Donghoon and Kim, Seungryong},
+      journal={arXiv preprint arXiv:2303.15413},
+      year={2023}
+    }
 }</code></pre>
   </div>
 </section>
