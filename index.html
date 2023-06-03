@@ -128,17 +128,13 @@
           <img src="gif_lowres/cat_etc_ours.gif" width="49%" style="flex: 1;">
         </div>
         <div style="display: flex; margin-bottom: 4px;">
-          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <div style="flex: 0.3; display: flex; justify-content: center; text-align: center;">
             <i>"a small kitten"</i>
           </div>
-        </div>
-        <div style="display: flex; margin-bottom: 4px;">
-          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <div style="flex: 0.3; display: flex; justify-content: center; text-align: center;">
             <i>"a majestic giraffe with a long neck"</i>
           </div>
-        </div>
-        <div style="display: flex; margin-bottom: 4px;">
-          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <div style="flex: 0.3; display: flex; justify-content: center; text-align: center;">
             <i>"a cute and chubby panda munching on bamboo"</i>
           </div>
         </div>
@@ -153,7 +149,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Existing score-distilling text-to-3D generation techniques, despite their consider-
+            Existing score-distilling text-to-3D generation techniques, despite their consider
             able promise, often encounter the view inconsistency problem. One of the most
             notable issues is the Janus problem, where the most canonical view of an object
             (e.g., face or head) appears in other views. In this work, we explore existing
@@ -163,7 +159,7 @@
             frameworks for view-consistent text-to-3D generation. Our first approach, called
             score debiasing, involves cutting off the score estimated by 2D diffusion models
             and gradually increasing the truncation value throughout the optimization process.
-            Our second approach, called prompt debiasing, identifies conflicting words be-
+            Our second approach, called prompt debiasing, identifies conflicting words be
             tween user prompts and view prompts using a language model, and adjusts the
             discrepancy between view prompts and the viewing direction of an object. Our
             experimental results show that our methods improve the realism of the generated
@@ -178,15 +174,29 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Motivation</h2>
-        <img width="60%" src="imgs/motivation1.png"> <br><b>
-        <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> (a) Naive score distillation </div></b>
-        <img width="60%" src="imgs/motivation2.png"> <br><b>
-        <div style="display: flex; justify-content: center; text-align: center;">  (b) 3D aware score distillation (Ours) </div> </b>
+        <img width="60%" src="imgs/score_prob-1.png"> <br><b>
+        <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> Visualization of the magnitude of the estimated score during the optimization. </div></b>
+        <div class="content has-text-justified">
+          <p>
+            High magnitude in the 2D score is typically
+            observed when the perturbed-and-denoised im
+            age by diffusion models significantly deviates
+            from the rendered image in the corresponding
+            pixels. Hence, adjusting this gradient
+            is necessary to reduce the artifacts and improve
+            the realism of the generated 3D objects. How
+            ever, the 2D bias that flows into the 3D field has
+            hardly been formulated or adjusted for better
+            optimization and 3D consistency.        </div>
+        <img width="60%" src="imgs/prompt_prob-1.png"> <br><b>
+        <div style="display: flex; justify-content: center; text-align: center;">  Samples from Stable Diffusion given a text prompt with contradiction. </div> </b>
         <br>
         <div class="content has-text-justified">
           <p>
-            (a) Previous methods only use noisy rendered images and prompt itself for score distillation through diffusion model, resulting in poor 3D coherence. 
-            (b) Our 3DFuse addresses this issue and shows robust performance in recovering 3D-consistent scene.
+            Despite
+"Back view of" is given in the prompts, the word
+"smiling" in the prompt makes diffusion models
+biased towards the front view of objects.
           </p>
         </div>
       </div>
