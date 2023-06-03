@@ -173,7 +173,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3">Motivation</h2>
+        <h2 class="title is-3">Score Debiasing</h2>
         <img width="60%" src="imgs/score_prob-1.png"> <br><b>
         <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> Visualization of the magnitude of the estimated score during the optimization. </div></b>
         <div class="content has-text-justified">
@@ -188,21 +188,34 @@
             ever, the 2D bias that flows into the 3D field has
             hardly been formulated or adjusted for better
             optimization and 3D consistency.        </div>
-        <img width="60%" src="imgs/prompt_prob-1.png"> <br><b>
-        <div style="display: flex; justify-content: center; text-align: center;">  Samples from Stable Diffusion given a text prompt with contradiction. </div> </b>
-        <br>
-        <div class="content has-text-justified">
-          <p>
-            Despite
-"Back view of" is given in the prompts, the word
-"smiling" in the prompt makes diffusion models
-biased towards the front view of objects.
-          </p>
-        </div>
       </div>
       <div class="column">
-        <h2 class="title is-3">Debiased-SDS framework</h2>
-        <img width="100%" src="imgs/3dfuse.png">
+        <h2 class="title is-3">Prompt Debiasing</h2>
+        <img width="60%" src="imgs/prompt_prob-1.png"> <br><b>
+          <div style="display: flex; justify-content: center; text-align: center;">  Samples from Stable Diffusion given a text prompt with contradiction. </div> </b>
+          <br>
+          <div class="content has-text-justified">
+            <p>
+              Despite
+  "Back view of" is given in the prompts, the word
+  "smiling" in the prompt makes diffusion models
+  biased towards the front view of objects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="container is-max-desktop">
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Debiased-SDS Framework</h2>
+        <img width="100%" src="imgs/main fig3-1.png">
         <br><br>
         <div class="content has-text-justified">
           <p>
@@ -214,7 +227,8 @@ biased towards the front view of objects.
     </div>
   </div> 
 
-    <br><br>
+
+    <!-- <br><br>
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
@@ -256,7 +270,7 @@ biased towards the front view of objects.
 
         </div>
       </div>
-    </div>
+    </div> -->
   
     <br>
 
