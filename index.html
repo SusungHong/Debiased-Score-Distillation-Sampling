@@ -205,15 +205,11 @@
         <div class="content has-text-justified">
           <p>
             High magnitude in the 2D score is typically
-            observed when the perturbed-and-denoised im
-            age by diffusion models significantly deviates
+            observed when the perturbed-and-denoised image by diffusion models significantly deviates
             from the rendered image in the corresponding
-            pixels. Hence, adjusting this gradient
-            is necessary to reduce the artifacts and improve
-            the realism of the generated 3D objects. How
-            ever, the 2D bias that flows into the 3D field has
-            hardly been formulated or adjusted for better
-            optimization and 3D consistency.        </div>
+            pixels. These peak part of 2D score result in redundant legs, beaks, horns, or faces.
+            So we clip this 2D scores to remove these extra artifacts.
+            Specifically, we start from low threshold and increase it linearly, which is in coarse-to-fine manner to keep the details of shapes.</div>
       </div>
       <div class="column">
         <h2 class="title is-3">Prompt Debiasing</h2>
@@ -222,10 +218,9 @@
           <br>
           <div class="content has-text-justified">
             <p>
-              Despite
-  "Back view of" is given in the prompts, the word
-  "smiling" in the prompt makes diffusion models
-  biased towards the front view of objects.
+              Despite "Back view of" is given in the prompts, the word "smiling" in the prompt makes diffusion models biased towards the front view of objects.
+              Thus, we remove the conflicting words in the prompts to make the prompts consistent with the viewing direction of objects.
+              In specific, we calculate pointwise mutual information (PMI) to identify the conflicting words between the user prompts and the view prompts, utilizing a large language model.
             </p>
           </div>
         </div>
