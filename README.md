@@ -24,9 +24,9 @@ Below are the results with **D-SDS** on **SJC**:
 
 Incorporating D-SDS into your work is a straightforward process, particularly with our score-debiasing feature that facilitates static and dynamic clipping of 2D-to-3D scores.
 
-A highly commendable project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. To utilize it, you can adjust the setting `system.guidance.grad_clip=[0,0.5,2.0,10000]` while using DeepFloyd-IF for guidance. For example:
+An awesome project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. To utilize it, you can adjust the setting `system.guidance.grad_clip=[0,0.5,2.0,10000]` while using DeepFloyd-IF for guidance. An example command for this can be found in `run_threestudio_debiasing.sh`:
 ```
-# Sample with score debiasing
+# Sampling with score debiasing
 python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000]
 ```
 
