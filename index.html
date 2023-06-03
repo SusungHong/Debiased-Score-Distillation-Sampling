@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Let 2D Diffusion Model Know 3D-Consistency for Robust Text-to-3D Generation">
+        content="Debiasing Scores and Prompts of 2D Diffusion for
+        View-consistent Text-to-3D Generation">
   <meta name="keywords" content="Diffusion, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Let 2D Diffusion Model Know 3D-Consistency for Robust Text-to-3D Generation</title>
+  <title>Debiasing Scores and Prompts of 2D Diffusion for View-consistent Text-to-3D Generation</title>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES2EBZLG9R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -44,31 +44,20 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Let 2D Diffusion Model Know 3D-Consistency<br> for Robust Text-to-3D Generation</h1>
+          <h1 class="title is-2 publication-title">Debiasing Scores and Prompts of 2D Diffusion for View-consistent Text-to-3D Generation<br> for Robust Text-to-3D Generation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://j0seo.github.io/">Junyoung Seo</a><sup>*1</sup>,</span>
-              <a href="https://scholar.google.com/citations?hl=ko&user=7cyLEQ0AAAAJ">Wooseok Jang</a><sup>*1</sup>,</span>
-              <a href="https://scholar.google.com/citations?user=wwLkYtMAAAAJ&hl=en">Min-Seop Kwak</a><sup>*1</sup>,</span>
-              Jaehoon Ko<sup>1</sup>,</span>
-              Hyeonsu Kim<sup>1</sup>,</span>
-              <br>
-              <a href="https://taki0112.notion.site/taki0112/Make-everyone-s-life-more-fun-via-AI-b15459d868bb490184e256cd95f26107">Junho Kim</a><sup>2</sup>,</span>
-              <a href="http://wityworks.com/">Jin-Hwa Kim</a><sup>†2</sup>,</span>
-              <a href="https://lee-jiyoung.github.io/">Jiyoung Lee</a><sup>†2</sup>,</span>
-              <a href="https://cvlab.korea.ac.kr/members/faculty">Seungryong Kim</a><sup>†1</sup>.</span>
-
+              <a href="https://github.com/SusungHong">Susung Hong</a><sup>*</sup>,</span>
+              <a href="https://github.com/sunovivid">Donghoon Ahn</a><sup>*1</sup>,</span>
+              <a href="https://cvlab.korea.ac.kr/members/faculty">Seungryong Kim</a>.</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Korea University,</span>
-            <span class="author-block"><sup>2</sup>NAVER AI Lab</span>
-            <br>
-            <small><sup>*</sup>Equal contribution <sup>†</sup>Co-corresponding author </small>
+            <small><sup>*</sup>Equal contribution
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2303.07937"
+                <a href="https://arxiv.org/abs/2303.15413"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -77,7 +66,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/KU-CVLAB/3DFuse"
+                <a href="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -201,16 +190,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Text-to-3D generation has shown rapid progress in recent days with the advent of score distillation, 
-            a methodology of using pretrained text-to-2D diffusion models to optimize neural radiance field (NeRF) in the zero-shot setting. 
-            However, the lack of 3D awareness in the 2D diffusion models destabilizes score distillation-based methods from reconstructing 
-            a plausible 3D scene. To address this issue, we propose 3DFuse, a novel framework that incorporates 3D awareness into pretrained 2D diffusion 
-            models, enhancing the robustness and 3D consistency of score distillation-based methods. We realize this by first constructing 
-            a coarse 3D structure of a given text prompt and then utilizing projected, view-specific depth map as a condition for the diffusion model. 
-            Additionally, we introduce a training strategy that enables the 2D diffusion model learns to handle the errors and sparsity within 
-            the coarse 3D structure for robust generation, as well as a method for ensuring semantic consistency throughout all viewpoints of the scene. 
-            Our framework surpasses the limitations of prior arts, and has significant implications for 3D consistent generation of 2D diffusion models.
-          </p>
+            Existing score-distilling text-to-3D generation techniques, despite their consider-
+            able promise, often encounter the view inconsistency problem. One of the most
+            notable issues is the Janus problem, where the most canonical view of an object
+            (e.g., face or head) appears in other views. In this work, we explore existing
+            frameworks for score-distilling text-to-3D generation and identify the main causes
+            of the view inconsistency problem—the embedded bias of 2D diffusion models.
+            Based on these findings, we propose two approaches to debias the score-distillation
+            frameworks for view-consistent text-to-3D generation. Our first approach, called
+            score debiasing, involves cutting off the score estimated by 2D diffusion models
+            and gradually increasing the truncation value throughout the optimization process.
+            Our second approach, called prompt debiasing, identifies conflicting words be-
+            tween user prompts and view prompts using a language model, and adjusts the
+            discrepancy between view prompts and the viewing direction of an object. Our
+            experimental results show that our methods improve the realism of the generated
+            3D objects by significantly reducing artifacts and achieve a good trade-off between
+            faithfulness to the 2D diffusion models and 3D consistency with little overhead.          </p>
         </div>
       </div>
     </div>
