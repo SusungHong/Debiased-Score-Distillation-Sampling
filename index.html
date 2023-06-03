@@ -200,7 +200,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <h2 class="title is-3">Score Debiasing</h2>
-        <img width="40%" src="imgs/score_prob-1.png"> <br><b>
+        <img width="90%" src="imgs/score_prob-1.png"> <br><b>
         <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> Visualization of the magnitude of the estimated score during the optimization. </div></b>
         <div class="content has-text-justified">
           <p>
@@ -208,23 +208,24 @@
           we often observe a high magnitude in the 2D score.
           This can result in the generation of unwanted elements like extra legs, beaks, horns, or faces.
           To tackle this issue, we apply a clipping technique to the 2D scores, removing these unnecessary artifacts.
-          We start with a low threshold and progressively increase it, ensuring that we preserve the fine details of the shapes while getting rid of unwanted elements.</div>
-      <div class="column">
-        <h2 class="title is-3">Prompt Debiasing</h2>
-        <img width="40%" src="imgs/prompt_prob-1.png"> <br><b>
-          <div style="display: flex; justify-content: center; text-align: center;">  Samples from Stable Diffusion given a text prompt with contradiction. </div> </b>
-          <br>
-          <div class="content has-text-justified">
-            <p>
-              Despite "Back view of" given in the prompts, the word "smiling" in the prompt makes diffusion models biased towards the front view of objects.
-              Thus, we remove the conflicting words in the prompts to make the prompts consistent with the viewing direction of an object.
-              In specific, we calculate pointwise mutual information (PMI) to identify the conflicting words between the user prompts and the view prompts, utilizing a large language model.
-            </p>
-          </div>
+          We start with a low threshold and progressively increase it, ensuring that we preserve the fine details of the shapes while getting rid of unwanted elements.
         </div>
       </div>
+      <div class="column">
+        <h2 class="title is-3">Prompt Debiasing</h2>
+        <img width="70%" src="imgs/prompt_prob-1.png"> <br>
+        <b><div style="display: flex; justify-content: center; text-align: center;">  Samples from Stable Diffusion given a text prompt with contradiction.</div> </b>
+        <br>
+        <div class="content has-text-justified">
+          <p>
+            Despite "Back view of" given in the prompts, the word "smiling" in the prompt makes diffusion models biased towards the front view of objects.
+            Thus, we remove the conflicting words in the prompts to make the prompts consistent with the viewing direction of an object.
+            In specific, we calculate pointwise mutual information (PMI) to identify the conflicting words between the user prompts and the view prompts, utilizing a large language model.
+          </p>
+        </div>
+      </div>
+      </div>
     </div>
-  </div> 
   <br>
   <br>
 
