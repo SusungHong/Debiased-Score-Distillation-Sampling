@@ -172,7 +172,7 @@
   <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column">
         <h2 class="title is-3">Motivation</h2>
         <img width="60%" src="imgs/score_prob-1.png"> <br><b>
         <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> Visualization of the magnitude of the estimated score during the optimization. </div></b>
@@ -200,21 +200,14 @@ biased towards the front view of objects.
           </p>
         </div>
       </div>
-    </div>
-  </div> 
-  <br>  <br>
-
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-five-fifths">
-        <h2 class="title is-3">3DFuse Framework</h2>
+      <div class="column">
+        <h2 class="title is-3">Debiased-SDS framework</h2>
         <img width="100%" src="imgs/3dfuse.png">
         <br><br>
         <div class="content has-text-justified">
           <p>
-            In the framework, semantic code is sampled to reduce the text prompt ambiguity by generating an image based on the text prompt and then optimizing the prompt’s embedding to match the generated image.
-            Our consistency injection module receives this semantic code to synthesize view-specific depth maps as a condition to the diffusion U-net. The module also consists of a sparse depth injector to implicitly incorporate 3D awareness by utilizing an external 3D prior,
-            and LoRA layers to maintain semantic consistency.
+            In the framework, e propose prompt and score debiasing techniques to
+            estimate robust and unbiased gradients of the 3D parameters w.r.t. the viewpoints.
           </p>
         </div>
       </div>
