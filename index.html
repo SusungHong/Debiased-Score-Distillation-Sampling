@@ -200,7 +200,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <h2 class="title is-3">Score Debiasing</h2>
-        <img width="100%" src="imgs/score_prob-1.png"> <br><b>
+        <img width="90%" src="imgs/score_prob-1.png"> <br><b>
         <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> Visualization of the magnitude of the estimated score during the optimization. </div></b>
         <div class="content has-text-justified">
           <p>
@@ -211,7 +211,7 @@
           We start with a low threshold and progressively increase it, ensuring that we preserve the fine details of the shapes while getting rid of unwanted elements.</div>
       <div class="column">
         <h2 class="title is-3">Prompt Debiasing</h2>
-        <img width="80%" src="imgs/prompt_prob-1.png"> <br><b>
+        <img width="70%" src="imgs/prompt_prob-1.png"> <br><b>
           <div style="display: flex; justify-content: center; text-align: center;">  Samples from Stable Diffusion given a text prompt with contradiction. </div> </b>
           <br>
           <div class="content has-text-justified">
@@ -236,10 +236,16 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Debiased-SDS Framework</h2>
         <img width="100%" src="imgs/main fig3-1.png">
-        <br><br>
+        <br><b>
+          <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> Overall illustraion of our framework. </div></b>
+        </b><br>
         <div class="content has-text-justified">
           <p>
-            In the framework, we 
+            Using the above two debiasing techniques, we propose a simple and efficient debiased score-distilling text-to-3D generation framework.
+            First, we perform prompt debiasing to make the prompts consistent with the viewing direction of an object.
+            Then, we perform score debiasing to remove the artifacts in the generated 3D objects.
+            Note that our framework is easily applicable to any score-distilling text-to-3D generation framework, such as DreamFusion, SDS, Magic3D, <i>etc</i>.
+            For more details, please refer to <a href="https://arxiv.org/abs/2303.15413">our paper</a>.
           </p>
         </div>
       </div>
