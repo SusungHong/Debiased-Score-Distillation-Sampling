@@ -5,7 +5,7 @@ This is the official and practical implementation of the [Debiased Score Distill
 
 ## 🎭 Why D-SDS?
 
-**D-SDS** offers a solution when SDS methods, such as **DreamFusion, Magic3D, SJC**, etc., don't produce the 3D results you're aiming for. If you've faced issues with artifacts or multiple faces, D-SDS is designed to overcome these challenges through two key mechanisms: Score Debiasing and Prompt Debiasing. For a comprehensive understanding of these processes, we recommend delving into our [paper](https://arxiv.org/abs/2303.15413).
+**Debiased Score Distillation Sampling (D-SDS)** offers a solution when **SDS methods**, such as **DreamFusion, Magic3D, SJC**, etc., don't produce the 3D results you're aiming for. If you've faced issues with artifacts or multiple faces, D-SDS is designed to overcome these challenges through two key mechanisms: Score Debiasing and Prompt Debiasing. For a comprehensive understanding of these processes, we recommend delving into our [paper](https://arxiv.org/abs/2303.15413).
 
 Below are the results with **D-SDS** on **ThreeStudio implementation of DreamFusion**:
 
