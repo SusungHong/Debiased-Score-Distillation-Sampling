@@ -36,7 +36,8 @@ We're currently undertaking code refactoring for prompt debiasing (employing BER
 
 ## 🔥 Work in Progress
 - [x] Refactoring Score Debiasing
-- [ ] Refactoring Prompt Debiasing
+- [ ] Refactoring Prompt Debiasing for ThreeStudio
+- [ ] Refactoring Prompt Debiasing for SJC
 
 ## Acknowledgements
 
