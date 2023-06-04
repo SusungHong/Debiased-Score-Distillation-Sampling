@@ -6,24 +6,27 @@ from einops import rearrange
 from imageio import imwrite
 from pydantic import validator
 
-from sjc.my.utils import (
+import sys
+sys.path.insert(0, 'sjc/')
+
+from my.utils import (
     tqdm, EventStorage, HeartBeat, EarlyLoopBreak,
     get_event_storage, get_heartbeat, read_stats
 )
-from sjc.my.config import BaseConf, dispatch, optional_load_config
-from sjc.my.utils.seed import seed_everything
+from my.config import BaseConf, dispatch, optional_load_config
+from my.utils.seed import seed_everything
 
-from sjc.adapt import ScoreAdapter, karras_t_schedule
-from sjc.run_img_sampling import GDDPM, SD, StableDiffusion
-from sjc.misc import torch_samps_to_imgs
-from sjc.pose import PoseConfig
+from adapt import ScoreAdapter, karras_t_schedule
+from run_img_sampling import GDDPM, SD, StableDiffusion
+from misc import torch_samps_to_imgs
+from pose import PoseConfig
 
-from sjc.run_nerf import VoxConfig
-from sjc.voxnerf.utils import every
-from sjc.voxnerf.render import (
+from run_nerf import VoxConfig
+from voxnerf.utils import every
+from voxnerf.render import (
     as_torch_tsrs, rays_from_img, ray_box_intersect, render_ray_bundle
 )
-from sjc.voxnerf.vis import stitch_vis, bad_vis as nerf_vis
+from voxnerf.vis import stitch_vis, bad_vis as nerf_vis
 
 
 device_glb = torch.device("cuda")
@@ -148,7 +151,7 @@ def sjc_3d(
 
                 grad = grad.mean(0, keepdim=True)
                 
-                if score_thres < 0:
+                if score_thres > 0:
                     dynamic_grad = score_thres
                     if score_dynamic:
                         dynamic_grad = score_thres * (0.25 + 0.75 * (i / n_steps))
