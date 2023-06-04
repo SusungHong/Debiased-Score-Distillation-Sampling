@@ -22,6 +22,8 @@ Below are the results with **D-SDS** on **SJC**:
 
 ## 🐧 How to Use D-SDS
 
+First, follow the installation instructions for your desired codebase. For example, this could be [ThreeStudio](https://github.com/threestudio-project/threestudio) or [SJC](https://github.com/pals-ttic/sjc).
+
 An awesome project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. To utilize it, you can adjust the setting `system.guidance.grad_clip=[0,0.5,2.0,10000]` when using DeepFloyd-IF for guidance. An example command for this can be found in `run_threestudio_debiasing.sh`:
 ```
 # Sampling with score debiasing
