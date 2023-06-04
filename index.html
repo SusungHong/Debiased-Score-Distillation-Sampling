@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Debiasing Scores and Prompts of 2D Diffusion for
+        View-consistent Text-to-3D Generation">
+  <meta name="keywords" content="Diffusion, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Debiasing Scores and Prompts of 2D Diffusion for Text-to-3D Generation</title>
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ES2EBZLG9R');
+</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Debiasing Scores and Prompts of 2D Diffusion <br>for Robust Text-to-3D Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/SusungHong">Susung Hong</a><sup>*</sup>,</span>
+              <a href="https://github.com/sunovivid">Donghoon Ahn</a><sup>*</sup>,</span>
+              <a href="https://cvlab.korea.ac.kr/members/faculty">Seungryong Kim</a>.</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <small><sup>*</sup>Equal contribution
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2303.15413"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">TL;DR</h2>
+      <div class="content has-text-justified">
+        <p>
+          We propose <b>Debiased Score Distillation Sampling (D-SDS)</b>, an efficient technique to address the <i>Janus problem</i>.
+          Our techniques involve <b>Score Debiasing</b>, which clip scores of diffusion models with a linearly increasing threshold,
+          and <b>Prompt Debiasing</b>, which removes conflicting words with view prefixes (<i>e.g.</i>, 'smiling' with 'back view').
+          By introducing our techniques to existing text-to-3D generation framework like DreamFusion, SJC, Magic3D, <i>etc.</i>,
+          you can eliminate artifacts such as multiple faces, horns, and ears from the generated 3D objects, resulting in more view-consistent objects.</p>
+      </div>
+    </div>
+  </div>
+</div> 
+<br>
+<br>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="display: flex;">
+        <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px;">
+          <div style="flex: 1; display: flex; justify-content: center;"><b>SDS (Stable-DreamFusion)</b></div>
+        </div>
+        <div style="flex: 1; display: flex; justify-content: center;">
+          <div style="flex: 1; display: flex; justify-content: center;"><b>Debiased-SDS (Ours)</b></div>
+        </div>
+      </div>
+      <div style="display: flex;">
+        <img src="gif_lowres/toucan_DreamFusion.gif" width="49%" style="margin-right: 3px; flex: 1;">
+        <img src="gif_lowres/toucan_ours.gif" width="49%" style="flex: 1;">
+      </div>
+      <div style="display: flex; margin-bottom: 4px;">
+        <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <i>""a colorful toucan with a large beak""</i>
+        </div>
+      </div>
+      <div style="display: flex;">
+          <img src="gif_lowres/kangaroo_DreamFusion.gif" width="49%" style="margin-right: 3px; flex: 1;">
+          <img src="gif_lowres/kangaroo_ours.gif" width="49%" style="flex: 1;">
+      </div>
+      <div style="display: flex; margin-bottom: 4px;">
+        <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px; text-align: center;">
+          <i>"a kangaroo wearing boxing gloves"</i>
+        </div>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div style="display: flex;">
+          <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px;">
+            <div style="flex: 1; display: flex; justify-content: center;"><b>SDS (SJC)</b></div>
+          </div>
+          <div style="flex: 1; display: flex; justify-content: center;">
+            <div style="flex: 1; display: flex; justify-content: center;"><b>Debiased-SDS (Ours)</b></div>
+          </div>
+        </div>
+        <div style="display: flex;">
+          <img src="gif_lowres/cat_etc_sjc.gif" width="49%" style="margin-right: 3px; flex: 1;">
+          <img src="gif_lowres/cat_etc_ours.gif" width="49%" style="flex: 1;">
+        </div>
+        <div style="display: flex; margin-bottom: 4px;">
+          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+            <i>"a small kitten"</i>
+          </div>
+          </div>
+          <div style="display: flex; margin-bottom: 4px;">
+
+          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+            <i>"a majestic giraffe with a long neck"</i>
+          </div>
+          </div>
+          <div style="display: flex; margin-bottom: 4px;">
+
+          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+            <i>"a cute and chubby panda munching on bamboo"</i>
+          </div></div>
+          
+        </div>
+      </div>
+  </div>
+
+  <div class="container is-max-desktop">
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Existing score-distilling text-to-3D generation techniques, despite their consider
+            able promise, often encounter the view inconsistency problem. One of the most
+            notable issues is the Janus problem, where the most canonical view of an object
+            (e.g., face or head) appears in other views. In this work, we explore existing
+            frameworks for score-distilling text-to-3D generation and identify the main causes
+            of the view inconsistency problem—the embedded bias of 2D diffusion models.
+            Based on these findings, we propose two approaches to debias the score-distillation
+            frameworks for view-consistent text-to-3D generation. Our first approach, called
+            score debiasing, involves cutting off the score estimated by 2D diffusion models
+            and gradually increasing the truncation value throughout the optimization process.
+            Our second approach, called prompt debiasing, identifies conflicting words be
+            tween user prompts and view prompts using a language model, and adjusts the
+            discrepancy between view prompts and the viewing direction of an object. Our
+            experimental results show that our methods improve the realism of the generated
+            3D objects by significantly reducing artifacts and achieve a good trade-off between
+            faithfulness to the 2D diffusion models and 3D consistency with little overhead.          </p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <br>
+  <br>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Score Debiasing</h2>
+        <img width="90%" src="imgs/score_prob-1.png"> <br><b>
+        <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> Visualization of the magnitude of the estimated score during the optimization. </div></b>
+        <div class="content has-text-justified">
+          <p>
+          When the perturbed-and-denoised image produced by diffusion models differs greatly from the rendered image in certain pixels,
+          we often observe a high magnitude in the 2D score.
+          This can result in the generation of unwanted elements like extra legs, beaks, horns, or faces.
+          To tackle this issue, we apply a clipping technique to the 2D scores, removing these unnecessary artifacts.
+          We start with a low threshold and progressively increase it, ensuring that we preserve the fine details of the shapes while getting rid of unwanted elements.
+        </div>
+      </div>
+      <div class="column">
+        <h2 class="title is-3">Prompt Debiasing</h2>
+        <img width="80%" src="imgs/prompt_prob-1.png"> <br>
+        <b><div style="display: flex; justify-content: center; text-align: center;">  Samples from Stable Diffusion given a text prompt with contradiction.</div> </b>
+        <br>
+        <div class="content has-text-justified">
+          <p>
+            Despite "Back view of" given in the prompts, the word "smiling" in the prompt makes diffusion models biased towards the front view of objects.
+            Thus, we remove the conflicting words in the prompts to make the prompts consistent with the viewing direction of an object.
+            In specific, we calculate pointwise mutual information (PMI) to identify the conflicting words between the user prompts and the view prompts, utilizing a large language model.
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  <br>
+  <br>
+
+
+  <div class="container is-max-desktop">
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Debiased-SDS Framework</h2>
+        <img width="100%" src="imgs/main fig3-1.png">
+        <br><b>
+          <div style="display: flex; justify-content: center; text-align: center; margin-bottom: 5px;"> Overall illustration of our framework. </div></b>
+        </b><br>
+        <div class="content has-text-justified">
+          <p>
+            Using the above two debiasing techniques, we propose a simple and efficient debiased score-distilling text-to-3D generation framework.
+            First, we perform prompt debiasing to make the prompts consistent with the viewing direction of an object.
+            Then, we perform score debiasing to remove the artifacts in the generated 3D objects.
+            Note that our framework is easily applicable to any score-distilling text-to-3D generation framework, such as DreamFusion, SDS, Magic3D, <i>etc</i>.
+            We provide an implementation of our techniques applied to the DreamFusion and SJC, which can be found on our <a href="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling">official repository</a> for D-SDS.
+            For further details, please refer to <a href="https://arxiv.org/abs/2303.15413">our paper</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+    <!-- <br><br>
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">View-dependent 2D Generation</h2>
+          <img width="100%" src="imgs/2dgen.png">
+          <p>
+            (a) results of view augmented prompting, and (b) our results with 3DFuse framework.
+          </p>
+          
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 class="title is-3">Image-conditional Generation</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <div style="display: flex; justify-content: center;">
+              <img width="35%" style="margin-right: 10px; margin-bottom: -10pt;" src="imgs/imagecon1.jpeg">
+              <video autoplay muted loop playsinline  width="35%" style="margin-bottom: -10pt;">
+                <source src="videos_lowres/imagecon1.mp4">
+              </video>
+              </div> <br>
+              <div style="display: flex; justify-content: center;">
+                <img width="35%" style="margin-right: 10px;" src="imgs/imagecon2.jpeg">
+                <video autoplay muted loop playsinline  width="35%">
+                  <source src="videos_lowres/imagecon2.mp4">
+                </video>
+                </div><br>
+               
+             
+            
+            <p>
+              Instead of generating the initial image from a text prompt, we directly give an input image, which effectively reconfigures our framework as an image-conditional setting.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+  
+    <br>
+
+</section>
+
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{hong2023debiasing,
+      title={Debiasing scores and prompts of 2d diffusion for robust text-to-3d generation},
+      author={Hong, Susung and Ahn, Donghoon and Kim, Seungryong},
+      journal={arXiv preprint arXiv:2303.15413},
+      year={2023}
+    }
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="#">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <h2 class="subtitle has-text-centered">
+        <div class="content">
+            This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+            We thank the authors for open-sourcing the source code. 
+        </div>
+      </h2>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
