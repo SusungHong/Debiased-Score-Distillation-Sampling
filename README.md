@@ -50,8 +50,8 @@ We're currently undertaking code refactoring for prompt debiasing (employing BER
 
 ## 🔥 Work in Progress
 - [x] Refactoring Score Debiasing
-- [ ] Refactoring Prompt Debiasing for ThreeStudio
-- [ ] Refactoring Prompt Debiasing for SJC
+- [ ] Refactoring Prompt Debiasing
+- [ ] Evaluation Code (A-LPIPS)
 
 ## Acknowledgements
 
