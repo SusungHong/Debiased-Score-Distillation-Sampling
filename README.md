@@ -22,15 +22,27 @@ Below are the results with **D-SDS** on **SJC**:
 
 ## 🐧 How to Use D-SDS
 
-Incorporating D-SDS into your work is a straightforward process, particularly with our score-debiasing feature that facilitates static and dynamic clipping of 2D-to-3D scores.
-
 An awesome project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. To utilize it, you can adjust the setting `system.guidance.grad_clip=[0,0.5,2.0,10000]` while using DeepFloyd-IF for guidance. An example command for this can be found in `run_threestudio_debiasing.sh`:
 ```
 # Sampling with score debiasing
 python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000]
 ```
 
-For [SJC](https://github.com/pals-ttic/sjc), simply clone the original repository and adjust the setting `/path/to/sjc/run_sjc.py` to ours.
+For [SJC](https://github.com/pals-ttic/sjc), simply clone the original repository and run the example command ``run_sjc_debiasing.sh`:
+```
+# Sampling with score debiasing
+python run_sjc.py \
+--sd.prompt "a colorful toucan with a large beak" \
+--n_steps 10000 \
+--lr 0.05 \
+--sd.scale 100.0 \
+--score_thres 8.0 \
+--score_dynamic True \
+--emptiness_weight 10000 \
+--emptiness_step 0.5 \
+--emptiness_multiplier 20.0 \
+--depth_weight 0
+```
 
 We're currently undertaking code refactoring for prompt debiasing (employing BERT-like LMs to identify contradictions) and will be releasing this updated codebase soon!
 
