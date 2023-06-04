@@ -22,13 +22,13 @@ Below are the results with **D-SDS** on **SJC**:
 
 ## 🐧 How to Use D-SDS
 
-An awesome project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. To utilize it, you can adjust the setting `system.guidance.grad_clip=[0,0.5,2.0,10000]` while using DeepFloyd-IF for guidance. An example command for this can be found in `run_threestudio_debiasing.sh`:
+An awesome project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. To utilize it, you can adjust the setting `system.guidance.grad_clip=[0,0.5,2.0,10000]` when using DeepFloyd-IF for guidance. An example command for this can be found in `run_threestudio_debiasing.sh`:
 ```
 # Sampling with score debiasing
 python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000]
 ```
 
-For [SJC](https://github.com/pals-ttic/sjc), run the example command ``run_sjc_debiasing.sh`:
+For [SJC](https://github.com/pals-ttic/sjc), run the example script `run_sjc_debiasing.sh`:
 ```
 # Sampling with score debiasing
 python run_sjc.py \
