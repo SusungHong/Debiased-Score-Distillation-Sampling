@@ -19,7 +19,7 @@ Below are the results with **D-SDS** on **SJC**:
 
 | SDS (SJC) | Debiased-SDS (Ours) |
 |:-----------------:|:-------------------:|
-| <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/3b1ed9b6-eac4-46cf-9934-bccbf23fb746" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/caf96dce-44d9-42f1-9815-fe9e91ffd2f8" width="400"/> |
+| <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/blob/gh-pages/gif_lowres/cat_etc_ours.gif" width="400"/> | <img src="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling/assets/5498512/caf96dce-44d9-42f1-9815-fe9e91ffd2f8" width="400"/> |
 
 ## 🐧 How to Use D-SDS
 
