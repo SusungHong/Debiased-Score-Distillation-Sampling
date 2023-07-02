@@ -32,7 +32,7 @@ python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.pro
 python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.prompt_processor.use_prompt_debiasing=true prompt_debiasing_mask_ids=[2]
 
 # Sampling with score & prompt debiasing
-python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000] system.prompt_processor.use_prompt_debiasing=true prompt_debiasing_mask_ids=[2]
+python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000] system.prompt_processor.use_prompt_debiasing=true system.prompt_processor.prompt_debiasing_mask_ids=[2]
 ```
 
 You can also find the manual at [Tips on Improving Quality](https://github.com/threestudio-project/threestudio).
