@@ -1,6 +1,0 @@
-[submodule "threestudio"]
-	path = threestudio
-	url = https://github.com/threestudio-project/threestudio
-[submodule "sjc"]
-	path = sjc
-	url = https://github.com/pals-ttic/sjc
