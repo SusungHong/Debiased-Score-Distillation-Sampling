@@ -33,6 +33,8 @@ python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.pro
 python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000] system.prompt_processor.use_prompt_debiasing=true system.prompt_processor.prompt_debiasing_mask_ids=[2]
 ```
 
+**While experimenting with the score debiasing parameters, we found that `[0, 0.5, 2.0, 10000]` is appropriate for DeepFloyd-IF guidance, and `[0, 2.0, 8.0, 10000]` works well for Stable Diffusion guidance.**
+
 You can also find the manual at [Tips on Improving Quality](https://github.com/threestudio-project/threestudio).
 
 ## Acknowledgements
