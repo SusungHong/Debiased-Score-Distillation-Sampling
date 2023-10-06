@@ -8,7 +8,7 @@
         View-consistent Text-to-3D Generation">
   <meta name="keywords" content="Diffusion, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Debiasing Scores and Prompts of 2D Diffusion for Text-to-3D Generation</title>
+  <title>Debiasing Scores and Prompts of 2D Diffusion for View-consistent Text-to-3D Generation <i>(NeurIPS 2023)</i></title>
 
 
 <script>
@@ -53,16 +53,15 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Debiasing Scores and Prompts of 2D Diffusion <br>for View-consistent Text-to-3D Generation</h1>
+          <h1 class="title is-2 publication-title" style="margin-bottom: 1.2rem;">Debiasing Scores and Prompts of 2D Diffusion <br>for View-consistent Text-to-3D Generation  <br></h1>
+          <h1 style="font-size:1.8rem;"> NeurIPS 2023</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://susunghong.github.io">Susung Hong</a><sup>*</sup>,</span>
+              <a href="https://github.com/SusungHong">Susung Hong</a><sup>*</sup>,</span>
               <a href="https://github.com/sunovivid">Donghoon Ahn</a><sup>*</sup>,</span>
               <a href="https://cvlab.korea.ac.kr/members/faculty">Seungryong Kim</a>.</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Korea University</span>
-            <br>
             <small><sup>*</sup>Equal contribution
           </div>
           <div class="column has-text-centered">
@@ -117,10 +116,19 @@
     <div class="hero-body">
       <div style="display: flex;">
         <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px;">
-          <div style="flex: 1; display: flex; justify-content: center;"><b>SDS (DreamFusion, ThreeStudio Implementation)</b></div>
+          <div style="flex: 1; display: flex; justify-content: center;"><b>SDS</b></div>
         </div>
         <div style="flex: 1; display: flex; justify-content: center;">
           <div style="flex: 1; display: flex; justify-content: center;"><b>Debiased-SDS (Ours)</b></div>
+        </div>
+      </div>
+      <div style="display: flex;">
+        <img src="gif_lowres/cat_etc_sjc.gif" width="49%" style="margin-right: 3px; flex: 1;">
+        <img src="gif_lowres/cat_etc_ours.gif" width="49%" style="flex: 1;">
+      </div>
+      <div style="display: flex; margin-bottom: 4px;">
+        <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <i>"a small kitten", "a majestic giraffe with a long neck", "a cute and chubby panda munching on bamboo" (SJC)</i>
         </div>
       </div>
       <div style="display: flex;">
@@ -129,52 +137,45 @@
       </div>
       <div style="display: flex; margin-bottom: 4px;">
         <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
-          <i>""a colorful toucan with a large beak""</i>
+          <i>"a colorful toucan with a large beak" (IF-DreamFusion, ThreeStudio Implementation)</i>
         </div>
       </div>
       <div style="display: flex;">
-          <img src="gif_lowres/kangaroo_DreamFusion.gif" width="49%" style="margin-right: 3px; flex: 1;">
-          <img src="gif_lowres/kangaroo_ours.gif" width="49%" style="flex: 1;">
+        <img src="gif_lowres/cat_base_magic3d.gif" width="49%" style="margin-right: 3px; flex: 1;">
+        <img src="gif_lowres/cat_our_magic3d.gif" width="49%" style="flex: 1;">
       </div>
       <div style="display: flex; margin-bottom: 4px;">
-        <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px; text-align: center;">
-          <i>"a kangaroo wearing boxing gloves"</i>
+        <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <i>"a playful and cuddly kitten with big eyes" (Magic3D, ThreeStudio Implementation)</i>
+        </div>
+      </div>
+      <div style="display: flex;">
+        <img src="gif_lowres/fla_base.gif" width="49%" style="margin-right: 3px; flex: 1;">
+        <img src="gif_lowres/fla_ours.gif" width="49%" style="flex: 1;">
+      </div>
+      <div style="display: flex; margin-bottom: 4px;">
+        <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <i>"a flamingo standing on one leg in shallow water" (ProlificDreamer, ThreeStudio Implementation)</i>
         </div>
       </div>
     </div>
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <div style="display: flex;">
-          <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px;">
-            <div style="flex: 1; display: flex; justify-content: center;"><b>SDS (SJC)</b></div>
-          </div>
-          <div style="flex: 1; display: flex; justify-content: center;">
-            <div style="flex: 1; display: flex; justify-content: center;"><b>Debiased-SDS (Ours)</b></div>
-          </div>
-        </div>
-        <div style="display: flex;">
-          <img src="gif_lowres/cat_etc_sjc.gif" width="49%" style="margin-right: 3px; flex: 1;">
-          <img src="gif_lowres/cat_etc_ours.gif" width="49%" style="flex: 1;">
-        </div>
-        <div style="display: flex; margin-bottom: 4px;">
-          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
-            <i>"a small kitten"</i>
-          </div>
-          </div>
-          <div style="display: flex; margin-bottom: 4px;">
-
-          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
-            <i>"a majestic giraffe with a long neck"</i>
-          </div>
-          </div>
-          <div style="display: flex; margin-bottom: 4px;">
-
-          <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
-            <i>"a cute and chubby panda munching on bamboo"</i>
-          </div></div>
-          
+      <!-- <div style="display: flex; margin-bottom: 4px;">
+        <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <i>"a small kitten" (SJC)</i>
         </div>
       </div>
+      <div style="display: flex; margin-bottom: 4px;">
+        <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <i>"a majestic giraffe with a long neck"</i>
+        </div>
+      </div>
+      <div style="display: flex; margin-bottom: 4px;">
+        <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+          <i>"a cute and chubby panda munching on bamboo"</i>
+        </div>
+      </div>
+    </div> -->
+  </div>
   </div>
 
   <div class="container is-max-desktop">
@@ -258,6 +259,7 @@
             First, we perform prompt debiasing to make the prompts consistent with the viewing direction of an object.
             Then, we perform score debiasing to remove the artifacts in the generated 3D objects.
             Note that our framework is easily applicable to any score-distilling text-to-3D generation framework, such as DreamFusion, SDS, Magic3D, <i>etc</i>.
+            We provide an implementation of our techniques applied to the DreamFusion and SJC, which can be found on our <a href="https://github.com/SusungHong/Debiased-Score-Distillation-Sampling">official repository</a> for D-SDS.
             For further details, please refer to <a href="https://arxiv.org/abs/2303.15413">our paper</a>.
           </p>
         </div>
@@ -266,6 +268,70 @@
   </div> 
 
 
+  <br>
+  <br>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">More Results</h2>
+          <div class="hero-body">
+            <div style="display: flex;">
+              <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px;">
+                <div style="flex: 1; display: flex; justify-content: center;"><b>SDS</b></div>
+              </div>
+              <div style="flex: 1; display: flex; justify-content: center;">
+                <div style="flex: 1; display: flex; justify-content: center;"><b>Debiased-SDS (Ours)</b></div>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <img src="gif_lowres/cup_base.gif" width="49%" style="margin-right: 3px; flex: 1;">
+              <img src="gif_lowres/cup_ours.gif" width="49%" style="flex: 1;">
+            </div>
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px; text-align: center;">
+                <i>"an elegant teacup with delicate floral designs" (ProlificDreamer, ThreeStudio Implementation)</i>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <img src="gif_lowres/toucan_base_magic3d.gif" width="49%" style="margin-right: 3px; flex: 1;">
+              <img src="gif_lowres/toucan_ours_magic3d.gif" width="49%" style="flex: 1;">
+            </div>
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px; text-align: center;">
+                <i>"a colorful toucan with a large beak" (Magic3D, ThreeStudio Implementation)</i>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <img src="gif_lowres/rabbit_base_IFDreamFusion.gif" width="49%" style="margin-right: 3px; flex: 1;">
+              <img src="gif_lowres/rabbit_ours_IFDreamFusion.gif" width="49%" style="flex: 1;">
+            </div>
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
+                <i>"a baby bunny, sitting on top of a stack of pancakes" (IF-DreamFusion, ThreeStudio Implementation)</i>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <img src="gif_lowres/kitten_base_IFDreamFusion.gif" width="49%" style="margin-right: 3px; flex: 1;">
+              <img src="gif_lowres/kitten_ours_IFDreamFusion.gif" width="49%" style="flex: 1;">
+            </div>
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px; text-align: center;">
+                <i>"a playful and cuddly kitten with big eyes" (IF-DreamFusion, ThreeStudio Implementation)</i>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <img src="gif_lowres/kangaroo_DreamFusion.gif" width="49%" style="margin-right: 3px; flex: 1;">
+              <img src="gif_lowres/kangaroo_ours.gif" width="49%" style="flex: 1;">
+            </div>
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="flex: 1; display: flex; justify-content: center; margin-right: 3px; text-align: center;">
+                <i>"a kangaroo wearing boxing gloves" (IF-DreamFusion, ThreeStudio Implementation)</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- <br><br>
   <div class="container is-max-desktop">
 
@@ -328,7 +394,7 @@
       journal={arXiv preprint arXiv:2303.15413},
       year={2023}
     }
-}</code></pre>
+    </code></pre>
   </div>
 </section>
 
