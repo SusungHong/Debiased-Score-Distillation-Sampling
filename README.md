@@ -21,7 +21,7 @@ Below are the results with **D-SDS** on **SJC**:
 
 ## 🐧 How to Use D-SDS
 
-An amazing project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. To utilize our method, here are some examples:
+An amazing project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. **Note that `[0, 2.0, 8.0, 10000]` is suitable for score debiasing in Stable Diffusion guidance, while `[0, 0.5, 2.0, 10000]` is suitable for DeepFloyd-IF guidance.** To activate our method, here are some examples:
 ```
 # Sampling with score debiasing
 python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000]
@@ -32,8 +32,6 @@ python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.pro
 # Sampling with score & prompt debiasing
 python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000] system.prompt_processor.use_prompt_debiasing=true system.prompt_processor.prompt_debiasing_mask_ids=[2]
 ```
-
-**While experimenting with the score debiasing parameters, we found that `[0, 0.5, 2.0, 10000]` is appropriate for DeepFloyd-IF guidance, and `[0, 2.0, 8.0, 10000]` works well for Stable Diffusion guidance.**
 
 You can also find the manual at [Tips on Improving Quality](https://github.com/threestudio-project/threestudio).
 
