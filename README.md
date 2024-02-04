@@ -37,7 +37,7 @@ You can also find the manual at [Tips on Improving Quality](https://github.com/t
 
 ## Acknowledgements
 
-We greatly appreciate the contributions of the great public projects, [SJC](https://github.com/pals-ttic/sjc) and [ThreeStudio](https://github.com/threestudio-project/threestudio).
+We appreciate the contributions of the great public projects, [SJC](https://github.com/pals-ttic/sjc) and [ThreeStudio](https://github.com/threestudio-project/threestudio).
 
 ## Cite as
 ```
