@@ -21,7 +21,7 @@ Below are the results with **D-SDS** on **SJC**:
 
 ## 🐧 How to Use D-SDS
 
-An amazing project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. **Note that the hyperparameter varies depending on the guidance used. For example, `[0, 2.0, 8.0, 10000]` is suitable for score debiasing in Stable Diffusion guidance (as described in our paper), while `[0, 0.5, 2.0, 10000]` is suitable for DeepFloyd-IF guidance.** To activate our method, here are some examples:
+An amazing project, [ThreeStudio](https://github.com/threestudio-project/threestudio), has already integrated our method in its main branch. **Note that the hyperparameter varies depending on the guidance used.** For example, `[0, 2.0, 8.0, 10000]` is suitable for score debiasing in Stable Diffusion guidance (as described in our paper), while `[0, 0.5, 2.0, 10000]` is suitable for DeepFloyd-IF guidance. To activate our method, here are some examples:
 ```
 # Sampling with score debiasing
 python launch.py --config configs/dreamfusion-if.yaml --train --gpu 0 system.prompt_processor.prompt="a colorful toucan with a large beak" system.guidance.grad_clip=[0,0.5,2.0,10000]
